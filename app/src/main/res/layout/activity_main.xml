@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
+        android:layout_marginBottom="70dp"
         />
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
@@ -36,7 +37,9 @@
             android:text="Comment"
             android:id="@+id/Button"
             android:layout_alignParentRight="true"
+            android:backgroundTint="#1E90FF"
             android:layout_width="wrap_content"
+            android:onClick="onBtnClick"
             android:layout_height="wrap_content">
         </Button>
 
