@@ -20,11 +20,26 @@
     android:layout_height="wrap_content"
     android:layout_below="@+id/andExoPlayerView"
     android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/videoChapterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Sanskrit Chapter 1 | शब्द्परिचय शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः"
+        android:textSize="20sp"
+        android:textColor="#0E87FD" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
         android:layout_marginBottom="70dp"
+        android:layout_below="@+id/videoChapterName"
         />
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
@@ -40,6 +55,7 @@
             android:backgroundTint="#1E90FF"
             android:layout_width="wrap_content"
             android:onClick="onBtnClick"
+
             android:layout_height="wrap_content">
         </Button>
 
@@ -47,6 +63,7 @@
             android:id="@+id/EditText"
             android:layout_width="fill_parent"
             android:layout_toLeftOf="@id/Button"
+            android:hint="Add a public comment ..."
             android:layout_height="wrap_content">
         </EditText>
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -60,7 +62,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getComments(){
+        // Creating listView header
+        TextView textView = new TextView(this);
+        textView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        textView.setText("  Comments : ");
+        textView.setTextSize(17);
+
+
         ListView lv = (ListView) findViewById(R.id.list);
+
+        lv.addHeaderView(textView);
+
+        // This is being done so as to not repeat the comments
+        names.clear();
+        comments.clear();
+
         List<String> your_array_list = new ArrayList<String>();
 
 
