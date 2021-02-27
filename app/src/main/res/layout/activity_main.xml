@@ -16,4 +16,35 @@
         app:andexo_show_controller="true"
         app:andexo_resize_mode="Zoom" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_below="@+id/andExoPlayerView"
+        />
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:text="Comment"
+            android:id="@+id/Button"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+
+        <EditText
+            android:id="@+id/EditText"
+            android:layout_width="fill_parent"
+            android:layout_toLeftOf="@id/Button"
+            android:layout_height="wrap_content">
+        </EditText>
+
+    </RelativeLayout>
+
 </RelativeLayout>
