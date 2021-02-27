@@ -15,14 +15,16 @@
         app:andexo_play_when_ready="true"
         app:andexo_show_controller="true"
         app:andexo_resize_mode="Zoom" />
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/andExoPlayerView"
+    android:orientation="vertical">
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
-        android:layout_below="@+id/andExoPlayerView"
         />
-
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
         android:layout_width="wrap_content"
@@ -46,5 +48,6 @@
         </EditText>
 
     </RelativeLayout>
+</RelativeLayout>
 
 </RelativeLayout>
