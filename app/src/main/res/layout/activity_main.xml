@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <com.potyvideo.library.AndExoPlayerView
         android:id="@+id/andExoPlayerView"
         android:layout_width="match_parent"
@@ -24,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-
     <TextView
         android:id="@+id/videoChapterName"
         android:layout_width="wrap_content"
@@ -33,13 +31,24 @@
         android:text="Sanskrit Chapter 1 | शब्द्परिचय शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः शब्द्परिचयः"
         android:textSize="20sp"
         android:textColor="#0E87FD" />
-
+    <TextView
+        android:id="@+id/commentHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoChapterName"
+        android:layout_marginTop="-2dp"
+        android:fontFamily="@font/antic"
+        android:padding="8dp"
+        android:text="Comments : "
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="17sp" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
-        android:layout_marginBottom="70dp"
-        android:layout_below="@+id/videoChapterName"
+android:layout_above="@+id/InnerRelativeLayout"
+        android:layout_below="@+id/commentHeader"
         />
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
@@ -47,7 +56,6 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layout_alignParentBottom="true" >
-
         <Button
             android:text="Comment"
             android:id="@+id/Button"
@@ -58,7 +66,6 @@
 
             android:layout_height="wrap_content">
         </Button>
-
         <EditText
             android:id="@+id/EditText"
             android:layout_width="fill_parent"
@@ -66,7 +73,13 @@
             android:hint="Add a public comment ..."
             android:layout_height="wrap_content">
         </EditText>
-
+        <FrameLayout
+            android:id="@+id/adView_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Button"
+            android:background="#666666">
+        </FrameLayout>
     </RelativeLayout>
 </RelativeLayout>
 
